@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="liuxiangyu">
+    <serverData>
+      <paths name="liuxiangyu">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/My_ip_pool_linux" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

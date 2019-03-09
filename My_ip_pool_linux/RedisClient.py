@@ -85,5 +85,12 @@ class RedisClient():
         """
         return self.db.zrevrange(redis_key, start, stop - 1)
 
+    def delete_all(self,redis_key):
+        """
+        删除所有redis_key中的数据
+        """
+        return self.db.zremrangebyrank(redis_key,0,-1)
+
+
 if __name__ == '__main__':
     conn = RedisClient()

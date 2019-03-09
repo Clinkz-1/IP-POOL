@@ -72,7 +72,7 @@ class Tester(object):
         print("当前https剩余", counts, "个代理")
         self.put_proxy()
 
-        for i in range(3):  # 控制并发
+        for i in range(4):  # 控制并发
             self.pool.apply_async(self.test_conn, callback=self._callback)
 
         while True:  # 防止主线程结束

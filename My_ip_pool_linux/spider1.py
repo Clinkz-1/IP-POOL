@@ -45,7 +45,7 @@ class Spider1(object):
             port = tr.xpath("./td[2]/text()")[0]
             type = tr.xpath("./td[4]/text()")[0]
             speed = tr.xpath("./td[6]/text()")[0]
-            if int(speed[0])>4:
+            if int(speed[0])>3:
                 continue
             url = type.lower() + "://" + ":".join([ip, port])
             if url in ip_list:

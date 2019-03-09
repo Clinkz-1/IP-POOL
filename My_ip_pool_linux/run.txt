@@ -1,4 +1,11 @@
 python3 set_time.py
-cron test_ip.cron
-cron get_ip.cron
-gunicorn -w 2 -b 127.0.0.1:5000 flask:app
+
+crontab -l
+0,30 * * * * /usr/bin/python3 /home/My_ip_pool_linux/get_ip.py
+5,18,35,48 * * * * /usr/bin/python3 /home/My_ip_pool_linux/test_ip.py
+
+/etc/init.d/nginx start
+/etc/init.d/nginx stop
+
+gunicorn -w 2 -b 127.0.0.1:5000 flask_api:app -t 180 &
+

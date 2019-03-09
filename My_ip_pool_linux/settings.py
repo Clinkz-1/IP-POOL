@@ -5,9 +5,9 @@ REDIS_PASSWORD = None
 
 #数据存储相关配置
 # 默认的分值
-DEFAULT_SCORE = 6
+DEFAULT_SCORE = 5
 # 最高分
-MAX_SCORE = 12
+MAX_SCORE = 10
 # 最低分
 MIN_SCORE = 1
 
